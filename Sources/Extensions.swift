@@ -21,7 +21,7 @@ func == (lhs: UIControl.Event, rhs: UIControl.Event) -> Bool {
 extension OperationQueue {
     static var serial: OperationQueue {
         let queue = OperationQueue()
-        queue.maxConcurrentOperationCount = 3
+        queue.maxConcurrentOperationCount = 1
         return queue
     }
 }
