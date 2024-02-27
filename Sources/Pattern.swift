@@ -70,7 +70,7 @@ public enum Note {
     }
 }
 
-public class HapticOperation: Operation {
+open class HapticOperation: Operation {
     let haptic: Haptic
     init(_ haptic: Haptic) {
         self.haptic = haptic
@@ -81,7 +81,7 @@ public class HapticOperation: Operation {
         }
     }
 }
-public class WaitOperation: Operation {
+open class WaitOperation: Operation {
     let duration: TimeInterval
     init(_ duration: TimeInterval) {
         self.duration = duration
