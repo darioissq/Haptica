@@ -75,7 +75,7 @@ open class HapticOperation: Operation {
     init(_ haptic: Haptic) {
         self.haptic = haptic
     }
-    override func main() {
+    override open func main() {
         DispatchQueue.main.sync {
             self.haptic.generate()
         }
@@ -86,7 +86,7 @@ open class WaitOperation: Operation {
     init(_ duration: TimeInterval) {
         self.duration = duration
     }
-    override func main() {
+    override open func main() {
         Thread.sleep(forTimeInterval: duration)
     }
 }
