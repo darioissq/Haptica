@@ -60,7 +60,7 @@ public enum Note {
         }
     }
     
-    var operation: Operation {
+    public var operation: Operation {
         switch self {
         case .haptic(let haptic):
             return HapticOperation(haptic)
@@ -70,7 +70,7 @@ public enum Note {
     }
 }
 
-class HapticOperation: Operation {
+public class HapticOperation: Operation {
     let haptic: Haptic
     init(_ haptic: Haptic) {
         self.haptic = haptic
@@ -81,7 +81,7 @@ class HapticOperation: Operation {
         }
     }
 }
-class WaitOperation: Operation {
+public class WaitOperation: Operation {
     let duration: TimeInterval
     init(_ duration: TimeInterval) {
         self.duration = duration
